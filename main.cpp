@@ -1,6 +1,6 @@
 #include "headers.h"
 #include "texture.h"
-#include "scene.h"
+#include "house.h"
 #include "platform.h"  // 添加平台头文件
 
 void specialkeys(int key, int x, int y) {
@@ -80,3 +80,4 @@ int main(int argc, char** argv) {
 
     return 0;
 }
+
