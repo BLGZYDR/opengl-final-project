@@ -6,7 +6,7 @@
 
 GLuint woodTexture, brickTexture, darkWoodTexture, marbleTexture, dirtTexture;
 
-// BMPÎÄ¼şÍ·½á¹¹
+// BMPæ–‡ä»¶å¤´ç»“æ„
 #pragma pack(push, 1)
 struct BMPHeader {
     unsigned char signature[2];
@@ -26,43 +26,34 @@ struct BMPHeader {
     unsigned int importantColors;
 };
 #pragma pack(pop)
-// Éú³ÉÄàÍÁÎÆÀí
+// ç”Ÿæˆæ³¥åœŸçº¹ç†
 void generateDirtTexture() {
     unsigned char dirtData[64][64][3];
-
-    // »ù´¡ÄàÍÁÑÕÉ«£¨Éî×ØÉ«£©
     int baseR = 101;
     int baseG = 67;
     int baseB = 33;
 
     for (int i = 0; i < 64; i++) {
         for (int j = 0; j < 64; j++) {
-            // Ìí¼ÓÒ»Ğ©Ëæ»ú±ä»¯Ä£ÄâÄàÍÁ¿ÅÁ£¸Ğ
             int variation = (int)(sin(i * 0.5 + j * 0.3) * 15);
-            int randomVar = (i * j * 13) % 10 - 5; // ¼òµ¥µÄÎ±Ëæ»ú
+            int randomVar = (i * j * 13) % 10 - 5;
 
-            // Ìí¼ÓÉîÉ«°ßµã£¨Ä£ÄâĞ¡Ê¯¿é»ò¸¯Ö³ÖÊ£©
             int spotChance = (i * j * 17) % 100;
             if (spotChance < 10) {
-                // ÉîÉ«°ßµã
                 dirtData[i][j][0] = baseR - 30 + variation + randomVar;
                 dirtData[i][j][1] = baseG - 20 + variation + randomVar;
                 dirtData[i][j][2] = baseB - 10 + variation + randomVar;
             }
             else if (spotChance > 85 && spotChance < 95) {
-                // Ç³É«°ßµã£¨Ä£ÄâĞ¡Ê¯×Ó»òÉ³×Ó£©
                 dirtData[i][j][0] = baseR + 20 + variation + randomVar;
                 dirtData[i][j][1] = baseG + 15 + variation + randomVar;
                 dirtData[i][j][2] = baseB + 10 + variation + randomVar;
             }
             else {
-                // »ù´¡ÄàÍÁÑÕÉ«
                 dirtData[i][j][0] = baseR + variation + randomVar;
                 dirtData[i][j][1] = baseG + variation + randomVar;
                 dirtData[i][j][2] = baseB + variation + randomVar;
             }
-
-            // Ìí¼ÓÒ»Ğ©¼òµ¥µÄÄàÍÁÁÑÎÆĞ§¹û
             if ((i - 20) * (i - 20) + (j - 20) * (j - 20) < 16) {
                 dirtData[i][j][0] -= 10;
                 dirtData[i][j][1] -= 8;
@@ -79,7 +70,7 @@ void generateDirtTexture() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 }
-// Éú³ÉÄ¾°åÎÆÀí
+// ç”Ÿæˆæœ¨æ¿çº¹ç†
 void generateWoodTexture() {
     unsigned char woodData[64][64][3];
 
@@ -108,7 +99,7 @@ void generateWoodTexture() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 }
 
-// Éú³É×©Ç½ÎÆÀí
+// ç”Ÿæˆç –å¢™çº¹ç†
 void generateBrickTexture() {
     unsigned char brickData[64][64][3];
     for (int i = 0; i < 64; i++) {
@@ -138,24 +129,24 @@ void generateBrickTexture() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 }
 
-// Éú³ÉÉîÉ«Ä¾Í·ÎÆÀí
+// ç”Ÿæˆæ·±è‰²æœ¨å¤´çº¹ç†
 void generateDarkWoodTexture() {
     unsigned char darkWoodData[64][64][3];
 
     for (int i = 0; i < 64; i++) {
         for (int j = 0; j < 64; j++) {
-            // ÉîÉ«Ä¾ÎÆ
+            // æ·±è‰²æœ¨çº¹
             int baseR = 73;
             int baseG = 57;
             int baseB = 45;
 
-            // Ä¾ÎÆĞ§¹û
+            // æœ¨çº¹æ•ˆæœ
             int variation = sin(i * 0.2 + j * 0.1) * 15;
             darkWoodData[i][j][0] = baseR + variation;
             darkWoodData[i][j][1] = baseG + variation;
             darkWoodData[i][j][2] = baseB + variation;
 
-            // Ìí¼ÓÉîÉ«ÌõÎÆ
+            // æ·»åŠ æ·±è‰²æ¡çº¹
             if (i % 16 < 2) {
                 darkWoodData[i][j][0] = 70;
                 darkWoodData[i][j][1] = 45;
@@ -173,7 +164,7 @@ void generateDarkWoodTexture() {
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 }
 
-// Éú³É´óÀíÊ¯ÎÆÀí
+// ç”Ÿæˆå¤§ç†çŸ³çº¹ç†
 void generateMarbleTexture() {
     unsigned char marbleData[64][64][3];
 
@@ -247,4 +238,5 @@ void applyMarbleTexture() {
 
 void disableTexture() {
     glDisable(GL_TEXTURE_2D);
+
 }
