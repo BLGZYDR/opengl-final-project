@@ -1,7 +1,6 @@
 #ifndef HEADERS_H
 #define HEADERS_H
 
-// 使用 freeglut
 #define FREEGLUT_STATIC
 #include<GL/freeglut.h>
 #include<GL/gl.h>
@@ -17,7 +16,6 @@ using std::cout;
 extern GLfloat w;
 extern GLfloat h;
 
-// 颜色定义
 #define WHITE      1.0, 1.0, 1.0
 #define GREEN      0.0, 0.502, 0.0
 #define RED        0.6, 0.1, 0.1
@@ -35,5 +33,6 @@ extern GLfloat h;
 #define WATER_BLUE 0.0, 0.5, 1.0     
 
 #define PI 3.14159265f
+
 
 #endif
