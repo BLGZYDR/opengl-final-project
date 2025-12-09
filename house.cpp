@@ -21,16 +21,16 @@ void display(void) {
     glScalef(1.5, 1.5, 1.5);
     glPushMatrix();
 
-    //»æÖÆÉ­ÁÖµØÃæÆ½Ì¨
+    //ç»˜åˆ¶æ£®æ—åœ°é¢å¹³å°
     drawForestGround();
 
-    //»æÖÆòêÑÑºÓÁ÷
+    //ç»˜åˆ¶èœ¿èœ’æ²³æµ
     drawRiver();
 
     glPopMatrix();
 
     
-    //»æÖÆÍÁµØµØ»ù
+    //ç»˜åˆ¶åœŸåœ°åœ°åŸº
     glPushMatrix();
     applyDirtTexture();
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
@@ -43,7 +43,7 @@ void display(void) {
     disableTexture();
     glPopMatrix();
 
-    //·¿×ÓËÄÃæÇ½±Ú
+    //æˆ¿å­å››é¢å¢™å£
     glPushMatrix();
     applyWoodTexture();
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
@@ -51,13 +51,13 @@ void display(void) {
     glLoadIdentity();
     glScalef(10, 10, 1.0);
     glMatrixMode(GL_MODELVIEW);
-    //·¿×ÓºóÇ½
+    //æˆ¿å­åå¢™
     cons2(320, 10, 100, 80, 160, 10);
     build2();
     cons2(480, 10, 100, -80, 160, 10);
     build2();
 
-    //·¿×ÓÇ°Ç½
+    //æˆ¿å­å‰å¢™
     cons4(320, 90, 385, 90, 385, 155, 260, 10);
     build4();
     cons4(480, 90, 415, 90, 415, 155, 260, 10);
@@ -85,7 +85,7 @@ void display(void) {
     cons1(385, 70, 260, 30, 10, 10);
     build();
 
-    //·¿×Ó×óÇ½
+    //æˆ¿å­å·¦å¢™
     cons2(320, 80, 100, 10, 20, 160);
     build2();
     cons1(320, 10, 100, 10, 70, 70);
@@ -95,7 +95,7 @@ void display(void) {
     cons1(320, 10, 170, 10, 40, 30);
     build();
 
-    //·¿×ÓÓÒÇ½
+    //æˆ¿å­å³å¢™
     cons2(480, 80, 110, -10, 20, 150);
     build2();
     cons1(480, 10, 110, -10, 70, 60);
@@ -108,7 +108,7 @@ void display(void) {
     disableTexture();
     glPopMatrix();
 
-    //»æÖÆ·¿¶¥
+    //ç»˜åˆ¶æˆ¿é¡¶
     glPushMatrix();
     applyBrickTexture();
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
@@ -121,13 +121,13 @@ void display(void) {
     cons3(400, 170, 400, 180, 490, 80, 490, 90, 95, 180);
     build3();
 
-    //»æÖÆÑÌ´Ñ
+    //ç»˜åˆ¶çƒŸå›±
     cons2(350, 140, 170, -20, -40, 20);
     build2();
     disableTexture();
     glPopMatrix();
 
-    //»æÖÆ´óÃÅ
+    //ç»˜åˆ¶å¤§é—¨
     glPushMatrix();
     applyDarkWoodTexture();
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
@@ -138,7 +138,7 @@ void display(void) {
     cons1(385, 20, 260, 30, 50, 5);
     build();
     disableTexture();
-    //»æÖÆÃÅÉÏµÄ×°ÊÎ
+    //ç»˜åˆ¶é—¨ä¸Šçš„è£…é¥°
     glColor3f(GRAY);
     cons1(390, 25, 265, 20, 2, 0.5);
     build();
@@ -150,7 +150,7 @@ void display(void) {
     build();
     cons1(408, 25, 265, 2, 40, 0.5);
     build();
-    //»æÖÆÃÅÇ°µÄÅï×Ó
+    //ç»˜åˆ¶é—¨å‰çš„æ£šå­
     glPushMatrix();
     applyBrickTexture();
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
@@ -176,14 +176,14 @@ void display(void) {
     glLoadIdentity();
     glScalef(10, 10, 1.0);
     glMatrixMode(GL_MODELVIEW);
-    //»æÖÆÈëÃÅ×ßÀÈ
+    //ç»˜åˆ¶å…¥é—¨èµ°å»Š
     cons1(385, 10, 260, 30, 10, 60);
     build();
     cons1(375, 10, 270, 10, 10, 50);
     build();
     cons1(415, 10, 270, 10, 10, 50);
     build();
-    //»æÖÆ×ó±ßµÄÎ§À¸
+    //ç»˜åˆ¶å·¦è¾¹çš„å›´æ 
     for (int i = 0; i < 6; i++)
     {
         cons1(378, 20, 270 + i * 10, 4, 30, 4);
@@ -191,7 +191,7 @@ void display(void) {
     }
     cons1(378, 50, 270, 4, 4, 58);
     build();
-    //»æÖÆÓÒ±ßÎ§À¸
+    //ç»˜åˆ¶å³è¾¹å›´æ 
     for (int i = 0; i < 6; i++)
     {
         cons1(418, 20, 270 + i * 10, 4, 30, 4);
@@ -199,15 +199,15 @@ void display(void) {
     }
     cons1(418, 50, 270, 4, 4, 58);
     build();
-    //»æÖÆÌ¨½×
+    //ç»˜åˆ¶å°é˜¶
     cons1(375, 10, 320, 50, 10, 10);
     build();
     cons1(385, 10, 330, 30, 5, 10);
     build();
-    //»æÖÆ·¿×ÓµØ°å
+    //ç»˜åˆ¶æˆ¿å­åœ°æ¿
     cons1(325, 10, 105, 150, 10, 150);
     build();
-    //»æÖÆÍâÎ§±ßÔµ
+    //ç»˜åˆ¶å¤–å›´è¾¹ç¼˜
     cons1(315, 10, 95, 170, 10, 5);
     build();
     cons1(315, 10, 100, 5, 10, 175);
@@ -218,7 +218,7 @@ void display(void) {
     build();
     cons1(480, 10, 270, -65, 10, 5);
     build();
-    //»æÖÆÑÌ´Ñ¶¥²¿±ßÔµ
+    //ç»˜åˆ¶çƒŸå›±é¡¶éƒ¨è¾¹ç¼˜
     cons1(355, 145, 165, -30, -10, 5);
     build();
     cons1(355, 145, 190, -30, -10, 5);
@@ -230,8 +230,8 @@ void display(void) {
     disableTexture();
     glPopMatrix();
     
-    //»æÖÆ·¿×ÓÄÚ²¿×°ÊÎ
-    //»æÖÆ´²ÆÌ´²°å
+    //ç»˜åˆ¶æˆ¿å­å†…éƒ¨è£…é¥°
+    //ç»˜åˆ¶åºŠé“ºåºŠæ¿
     glPushMatrix();
     applyWoodTexture();
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
@@ -245,7 +245,7 @@ void display(void) {
     build();
     disableTexture();
     glPopMatrix();
-    //»æÖÆ±»Èì
+    //ç»˜åˆ¶è¢«è¤¥
     glColor3f(WHITE);
     cons1(330, 30, 113, 30, 10, 15);
     build();
@@ -253,13 +253,13 @@ void display(void) {
     cons1(330, 30, 128, 30, 10, 45);
     build();
 
-    //»æÖÆÉ³·¢
-    //»æÖÆµæ×Ó
+    //ç»˜åˆ¶æ²™å‘
+    //ç»˜åˆ¶å«å­
     cons1(470, 30, 150, -30, 10, 60);
     build();
     cons1(470, 40, 150, -5, 12, 60);
     build();
-    //»æÖÆÄ¾ÖÆµ××ù
+    //ç»˜åˆ¶æœ¨åˆ¶åº•åº§
     glPushMatrix();
     applyWoodTexture();
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
@@ -275,7 +275,7 @@ void display(void) {
     build();
     disableTexture();
     glPopMatrix();
-    //»æÖÆ¹ñ×Ó
+    //ç»˜åˆ¶æŸœå­
     glPushMatrix();
     applyDarkWoodTexture();
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
@@ -295,7 +295,7 @@ void display(void) {
     disableTexture();
     glPopMatrix();
 
-    //»æÖÆµØÌº
+    //ç»˜åˆ¶åœ°æ¯¯
     glPushMatrix();
     applyCarpetTexture();
     glTexEnvf(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
@@ -309,28 +309,31 @@ void display(void) {
     glPopMatrix();
     
     
-    //»æÖÆ´°»§²£Á§
+    //ç»˜åˆ¶çª—æˆ·ç»ç’ƒ
+    //glEnable(GL_BLEND);
+    //glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
     glColor4f(WHITE, 0.2);
-    //ÕıÃæ´°»§1
+    //glDisable(GL_BLEND);è¢«æ³¨é‡Šæ‰çš„ä¸ºå½“å‰æè´¨ä¸é€å…‰æ—¶å¯ä»¥è¿›è¡Œçš„å°è¯•ï¼Œè‹¥è¿˜æ˜¯ä¸è¡Œå¯ä»¥è€ƒè™‘ç§»é™¤çª—æˆ·ç»ç’ƒæˆ–è¯¢é—®AI
+    //æ­£é¢çª—æˆ·1
     cons1(320, 50, 170, 10, 30, 30);
     build();
-    //ÕıÃæ´°»§2
+    //æ­£é¢çª—æˆ·2
     cons1(480, 50, 170, -10, 30, 30);
     build();
-    //ÕıÃæ´°»§3
+    //æ­£é¢çª—æˆ·3
     cons1(385, 100, 260, 30, 30, 10);
     build();
-    //×óÃæ´°»§
+    //å·¦é¢çª—æˆ·
     cons1(340, 50, 260, 30, 30, 10);
     build();
-    //ÓÒÃæ´°»§
+    //å³é¢çª—æˆ·
     cons1(430, 50, 260, 30, 30, 10);
     build();
 
     glPopMatrix();
-    //»æÖÆ´°»§±ß¿ò
+    //ç»˜åˆ¶çª—æˆ·è¾¹æ¡†
     glColor3f(BROWN);
-    //ÕıÃæ´°»§±ß¿ò1
+    //æ­£é¢çª—æˆ·è¾¹æ¡†1
     cons1(380, 95, 270, 40, 5, 1);
     build();
     cons1(380, 130, 270, 40, 5, 1);
@@ -341,7 +344,7 @@ void display(void) {
     build();
     cons1(399, 100, 270, 2, 30, 1);
     build();
-    //ÕıÃæ´°»§±ß¿ò2
+    //æ­£é¢çª—æˆ·è¾¹æ¡†2
     cons1(335, 45, 270, 40, 5, 1);
     build();
     cons1(335, 80, 270, 40, 5, 1);
@@ -352,7 +355,7 @@ void display(void) {
     build();
     cons1(354, 50, 270, 2, 30, 1);
     build();
-    //ÕıÃæ´°»§±ß¿ò3
+    //æ­£é¢çª—æˆ·è¾¹æ¡†3
     cons1(425, 45, 270, 40, 5, 1);
     build();
     cons1(425, 80, 270, 40, 5, 1);
@@ -363,7 +366,7 @@ void display(void) {
     build();
     cons1(444, 50, 270, 2, 30, 1);
     build();
-    //×óÃæ´°»§±ß¿ò
+    //å·¦é¢çª—æˆ·è¾¹æ¡†
     cons1(320, 45, 165, -1, 5, 40);
     build();
     cons1(320, 85, 165, -1, -5, 40);
@@ -374,7 +377,7 @@ void display(void) {
     build();
     cons1(320, 50, 184, -1, 30, 2);
     build();
-    //ÓÒÃæ´°»§±ß¿ò
+    //å³é¢çª—æˆ·è¾¹æ¡†
     cons1(481, 45, 165, -1, 5, 40);
     build();
     cons1(481, 85, 165, -1, -5, 40);
@@ -390,5 +393,6 @@ void display(void) {
     glutSwapBuffers();
 
 }
+
 
 
