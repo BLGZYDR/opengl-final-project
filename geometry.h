@@ -5,20 +5,21 @@
 extern double fang[8][3];
 extern double san[8][3];
 
-// Ô­ÓĞº¯ÊıÉùÃ÷
-//»æÖÆÇòÌå
+// åŸæœ‰å‡½æ•°å£°æ˜
+//ç»˜åˆ¶çƒä½“
 void drawSphere(double r, int lats, int longs, double x, double y, double z);
-//»æÖÆÌİĞÎÖùÌå
+//ç»˜åˆ¶æ¢¯å½¢æŸ±ä½“ï¼ˆç”Ÿæˆçš„æ¢¯å½¢ä»¥x-zå¹³é¢ä¸ºåº•é¢ï¼Œé«˜åˆ†åˆ«ä¸ºy1å’Œy1/2ï¼‰
 void cons2(double x, double y, double z, double x1, double y1, double z1);
 void build2();
-//»æÖÆÁ¢·½Ìå
+//ç»˜åˆ¶ç«‹æ–¹ä½“ï¼ˆä»¥xï¼Œyï¼Œzç‚¹å‘ä¸‰ä¸ªæ–¹å‘åˆ†åˆ«å»¶ç”³x1ï¼Œy1ï¼Œz1å¾—åˆ°ç«‹æ–¹ä½“ï¼‰
 void cons1(double x, double y, double z, double x1, double y1, double z1);
 void build();
-//»æÖÆµ×ÃæÓëx-yÆ½ÃæÆ½ĞĞµÄÆ½ĞĞËÄ±ßĞÎÖùÌå
+//ç»˜åˆ¶åº•é¢ä¸x-yå¹³é¢å¹³è¡Œçš„å¹³è¡Œå››è¾¹å½¢æŸ±ä½“ï¼ˆè®¾ç½®åº•é¢å››ä¸ªç‚¹xï¼Œyåæ ‡ï¼Œåº•é¢zåæ ‡ä»¥åŠzæ–¹å‘é«˜åº¦ï¼‰
 void cons3(double x1, double y1, double x2, double y2,double x3, double y3, double x4, double y4,double z_base, double height);
 void build3();
-//»æÖÆµ×ÃæÓëx-yÆ½ÃæÆ½ĞĞµÄÈı½ÇÖù
+//ç»˜åˆ¶åº•é¢ä¸x-yå¹³é¢å¹³è¡Œçš„ä¸‰è§’æŸ±ï¼ˆè®¾ç½®åº•é¢ä¸‰ä¸ªç‚¹xï¼Œyåæ ‡ï¼Œåº•é¢zåæ ‡ä»¥åŠzæ–¹å‘é«˜åº¦ï¼‰
 void cons4(double x1, double y1, double x2, double y2, double x3, double y3, double z_base, double height);
 void build4();
+
 
 #endif
