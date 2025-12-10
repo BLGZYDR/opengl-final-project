@@ -2,7 +2,7 @@
 #include "texture.h"
 #include "house.h"
 #include "platform.h"
-#include "rain.h"  // 添加雨系统头文件
+#include "rain.h"
 
 // 添加键盘回调函数
 void keyboard(unsigned char key, int x, int y) {
@@ -12,7 +12,6 @@ void keyboard(unsigned char key, int x, int y) {
         rainSystem.toggleRain();
         std::cout << "Rain toggled. Is raining: " << (rainSystem.isRaining ? "Yes" : "No") << std::endl;
         break;
-        // 移除了W和S键的风向控制功能
     }
     glutPostRedisplay();
 }
@@ -104,3 +103,4 @@ int main(int argc, char** argv) {
 
     return 0;
 }
+
