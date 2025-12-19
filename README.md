@@ -13,4 +13,4 @@ opengl版本： 4.6.0 - Build 32.0.101.6790（兼容问题暂时未测试）
 更新日志：  
 12.10新增下雨系统  
 12.11新增下雪系统，调整rain模块为weather模块包括下雨下雪功能；优化代码结构，将house模块拆分为scene模块和house两个模块，后续场景搭建可在原模块上建立函数再在scene中的display函数里调用  
-12.17调整代码结构，src中有cpp文件，include中有h文件，更新CMakeLists.h。
+12.17调整代码结构，src中有cpp文件，include中有h文件，更新CMakeLists.txt。
